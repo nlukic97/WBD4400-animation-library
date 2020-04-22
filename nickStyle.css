@@ -27,6 +27,7 @@
 
 
 /*razmatra se*/
+/* 
 .nickStyle.floatUp {
 	margin-top: 70px;
 	opacity: 0%;
@@ -38,7 +39,7 @@
 	transition: 1s ease-in;
 }
 
-/*razmatra se*/
+
 .nickStyle.floatLeft {
 	margin-left: -100px;
 	opacity: 0%;
@@ -48,9 +49,8 @@
 	margin-left: 0px;
 	opacity: 100%;
 	transition: 1s ease-in;
-}
-
-
+} 
+*/
 
 
 
@@ -69,6 +69,84 @@ displayed when it is 40% away from the bottom of the screen*/
 	opacity:100%;
 	transition: 1s all;
 }
+
+
+
+
+/* Animation 5 --------------------------------------------------- line box*/
+
+.nickStyle.line-draw {
+	position: relative;
+	/*box-sizing: border-box;*/
+}
+
+.nickStyle.line-draw:before {
+	content: '';
+	position: absolute;
+	animation: line-draw-back 0.7s ease-in;
+	border-left: 2px solid blue;
+	border-top: 2px solid blue;
+	top: -2px;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	opacity: 0%;
+}
+
+.nickStyle.line-draw:after {
+	content: '';
+	position: absolute;
+	animation: line-draw-back 0.7s ease-in;
+	border-bottom: 2px solid blue;
+	border-right: 2px solid blue;
+	bottom: 0;
+	right: 0px;
+	width: 0%;
+	height: 0%;
+	opacity: 0%;
+}
+
+.nickStyle.line-draw:hover:after, .nickStyle.line-draw:hover:before {
+	animation: line-draw 0.7s ease-in forwards;
+	display: block;
+}
+
+@keyframes line-draw {
+	0% {
+		opacity:0%;
+		width: 0%;
+		height: 0%;
+	}
+
+	5%{
+		opacity: 100%;
+	}
+	100% {
+		opacity: 100%;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@keyframes line-draw-back {
+	0% {
+		width: 100%;
+		height: 100%;
+		opacity: 100%
+	}
+
+	99% {
+		opacity: 100%;
+	}
+	100% {
+		width: 0%;
+		height: 0%;
+		opacity: 0%;
+	}
+}
+
+
+
 
 /*
 	stavi neki underline texta, i ono sa kutijom je kul
