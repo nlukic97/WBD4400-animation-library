@@ -12,7 +12,7 @@
 
 /*2st animation - scale and box shadow*/
 .nickStyle.scale-shadow:hover{
-	transform: scale(1.04);
+	transform: scale(1.01);
 	box-shadow: 1px 1px 10px 1px;
 	transition: 0.3s all ease-in;
 	cursor: pointer;
@@ -25,37 +25,7 @@
 
 
 
-
-/*razmatra se*/
-/* 
-.nickStyle.floatUp {
-	margin-top: 70px;
-	opacity: 0%;
-}
-
-.nickStyle.floatUp.showUp {
-	margin-top: 0px;
-	opacity: 100%;
-	transition: 1s ease-in;
-}
-
-
-.nickStyle.floatLeft {
-	margin-left: -100px;
-	opacity: 0%;
-}
-
-.nickStyle.floatLeft:hover {
-	margin-left: 0px;
-	opacity: 100%;
-	transition: 1s ease-in;
-} 
-*/
-
-
-
-
-/*Animation 4 code - float and opacity in on scroll*/
+/*Animation 3 code - float and opacity in on scroll*/
 
 /*DOcumentation - place this class 'nickStyle item' on any section or element you would like to be 
 displayed when it is 40% away from the bottom of the screen*/
@@ -73,7 +43,7 @@ displayed when it is 40% away from the bottom of the screen*/
 
 
 
-/* Animation 5 --------------------------------------------------- line box*/
+/* Animation 4 --------------------------------------------------- line box*/
 
 .nickStyle.line-draw {
 	position: relative;
@@ -149,7 +119,53 @@ displayed when it is 40% away from the bottom of the screen*/
 
 
 /*
-	stavi neki underline texta, i ono sa kutijom je kul
+	animation 5 - to use this, add class .nickStyle .addTilt -> when element is 50% from top, it will wiggle
 */
+.nickStyle.tilt {
+	animation: tilt-back 0.6s ease-in forwards;
+}
+.nickStyle.tilt:hover {
+	animation: tilt 1s forwards;
+}
+
+@keyframes tilt {
+	0%{
+		transform: rotate(0deg);
+	}
+
+	25%{
+		transform: rotate(30deg);
+	}
+
+	50%{
+		transform: rotate(-30deg);
+	}
+
+	75%{
+		transform: rotate(30deg);
+	}
+
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes tilt-back {
+	0%{
+		transform: rotate(0deg);
+	}
+
+	33%{
+		transform: rotate(30deg);
+	}
+
+	66%{
+		transform: rotate(-30deg);
+	}
+
+	100%{
+		transform: rotate(0deg);
+	}
+}
 
 
