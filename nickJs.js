@@ -8,7 +8,7 @@ $(window).scroll(function(){
 
 		var bounding = theSection.getBoundingClientRect().y; //distance of top of section from top of page
 		var height = window.innerHeight;
-		if(bounding < height * 0.60 || bounding < height * 0.90){
+		if(bounding < height * 0.60 || bounding < height * 0.90){ //poradi na ovim brojkama eventualno da samo jednom se funkcija pozove
 				$(theSection).attr('id','show');
 			}
 		})
