@@ -1,4 +1,4 @@
-/*1st animation - just scale*/
+/*1st animation - scale*/
 .nickStyle.scale:hover{
 	transform: scale(1.1);
 	transition: 0.3s all ease-in;
@@ -10,9 +10,9 @@
 }
 
 
-/*2st animation - scale and box shadow*/
+/*2st animation - scale-shadow*/
 .nickStyle.scale-shadow:hover{
-	transform: scale(1.01);
+	transform: scale(1.02);
 	box-shadow: 1px 1px 10px 1px;
 	transition: 0.3s all ease-in;
 	cursor: pointer;
@@ -25,29 +25,17 @@
 
 
 
-/*Animation 3 code - float and opacity in on scroll*/
-
-/*DOcumentation - place this class 'nickStyle item' on any section or element you would like to be 
-displayed when it is 40% away from the bottom of the screen*/
+/*Animation 3 - float up and full opacity on scroll*/
 .nickStyle.item {
 	opacity: 0%;
 	margin-top: 50px;
 }
 
-#show {
-	margin-top: 0px;
-	opacity:100%;
-	transition: 1s all;
-}
 
 
-
-
-/* Animation 4 --------------------------------------------------- line box*/
-
+/* Animation 4 - line-draw*/
 .nickStyle.line-draw {
 	position: relative;
-	/*box-sizing: border-box;*/
 }
 
 .nickStyle.line-draw:before {
@@ -119,7 +107,7 @@ displayed when it is 40% away from the bottom of the screen*/
 
 
 /*
-	animation 5 - to use this, add class .nickStyle .addTilt -> when element is 50% from top, it will wiggle
+	animation 5 - tilt
 */
 .nickStyle.tilt {
 	animation: tilt-back 0.6s ease-in forwards;
