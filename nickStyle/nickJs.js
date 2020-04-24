@@ -7,11 +7,8 @@ $(window).scroll(function(){
 
 		var bounding = theElement.getBoundingClientRect().y;
 		var height = window.innerHeight;
-		if(bounding < height * 0.60){ //poradi na ovim brojkama eventualno da samo jednom se funkcija pozove
-				$(theElement)
-				.css('marginTop','0px')
-				.css('opacity', '100%')
-				.css('transition','1s all')
+		if(bounding < height * 0.60){
+				$(theElement).css('animation','item-show 1s forwards')
 			}
 		})
 

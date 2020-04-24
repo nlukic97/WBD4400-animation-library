@@ -1,26 +1,67 @@
 /*1st animation - scale*/
 .nickStyle.scale:hover{
-	transform: scale(1.1);
-	transition: 0.3s all ease-in;
+	animation: scale 0.3s ease-in forwards;
 }
 
 .nickStyle.scale{
+	animation: scale-back 0.2s ease-in;
+}
+
+@keyframes scale {
+	0% {
 	transform: scale(1);
-	transition: 0.2s all ease-in;
+	}
+
+	100% {
+	transform: scale(1.1);
+	}
+}
+
+@keyframes scale-back {
+	0% {
+	transform: scale(1.1);
+	}
+
+	100% {
+	transform: scale(1);	
+	}
 }
 
 
 /*2st animation - scale-shadow*/
 .nickStyle.scale-shadow:hover{
 	transform: scale(1.02);
-	box-shadow: 1px 1px 10px 1px;
-	transition: 0.3s all ease-in;
+	animation: 0.3s scale-hover ease-in forwards;
 	cursor: pointer;
 }
 
 .nickStyle.scale-shadow{
 	transform: scale(1);
-	transition: 0.2s all ease-in;
+	animation: 0.2s scale-hover-back ease-in;
+}
+
+@keyframes scale-hover {
+	0% {
+	transform: scale(1);
+	box-shadow: none;
+	}
+
+	100% {
+	transform: scale(1.0.2);
+	box-shadow: 1px 1px 10px 1px;
+	}
+}
+
+@keyframes scale-hover-back {
+	0% {
+	transform: scale(1.02);
+	box-shadow: 1px 1px 10px 1px;
+	}
+
+	100% {
+	transform: scale(1);
+	box-shadow: none;
+	}
 }
 
 
@@ -29,6 +70,18 @@
 .nickStyle.item {
 	opacity: 0%;
 	margin-top: 50px;
+}
+
+@keyframes item-show {
+	0%{
+		opacity: 0%;
+		margin-top: 50px;
+	}
+
+	100%{
+		opacity: 100%;
+		margin-top: 0px;
+	}
 }
 
 
